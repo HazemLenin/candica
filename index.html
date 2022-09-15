@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="90s nostalgic candy shop" />
+		<meta name="theme-color" content="#FF80FF" />
+
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Jquery -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+			integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Slick carousel -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+
+		<!-- Fontawesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="scss/style.css" />
+
+		<!-- Javascript -->
+		<script src="./script.js" defer></script>
+		<title>Candica - Taste your 90s favourite flavour</title>
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<span class="header-logo">Candica</span>
+			<button class="burger-btn" id="sidebar-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<nav id="sidebar">
+				<ul>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Flavour</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">About</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<!-- Hero -->
+			<section class="hero" id="hero">
+				<div class="hero__content">
+					<h1>Taste your 90s favourite flavour</h1>
+					<div class="btn-shadow-wrapper cta-btn">
+						<a href="#footer" class="btn btn-primary">Order Now</a>
+					</div>
+				</div>
+				<div class="hero__image">
+					<div class="image-shadow">
+						<div class="image"></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Flavours -->
+			<section class="flavours" id="flavours">
+				<h2>Flavours</h2>
+				<div class="flavours-slider">
+					<div class="flavour-shadow">
+						<figure class="flavour">
+							<div class="image-holder">
+								<img src="./images/ice-cream-cones.jpg" alt="" />
+							</div>
+							<figcaption>
+								<span>$0.00</span>
+								<hr />
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="flavour-shadow">
+						<figure class="flavour">
+							<div class="image-holder">
+								<img src="./images/ice-cream-cones.jpg" alt="" />
+							</div>
+							<figcaption>
+								<span>$0.00</span>
+								<hr />
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="flavour-shadow">
+						<figure class="flavour">
+							<div class="image-holder">
+								<img src="./images/ice-cream-cones.jpg" alt="" />
+							</div>
+							<figcaption>
+								<span>$0.00</span>
+								<hr />
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="flavour-shadow">
+						<figure class="flavour">
+							<div class="image-holder">
+								<img src="./images/ice-cream-cones.jpg" alt="" />
+							</div>
+							<figcaption>
+								<span>$0.00</span>
+								<hr />
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="flavour-shadow">
+						<figure class="flavour">
+							<div class="image-holder">
+								<img src="./images/ice-cream-cones.jpg" alt="" />
+							</div>
+							<figcaption>
+								<span>$0.00</span>
+								<hr />
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="slider-nav">
+					<div class="btn-shadow-wrapper icon">
+						<button class="btn btn-secondary prev-arrow-slider">
+							<i class="fa-solid fa-chevron-left"></i>
+						</button>
+					</div>
+					<div class="btn-shadow-wrapper cta-btn">
+						<a href="#footer" class="btn btn-secondary">Order Now</a>
+					</div>
+					<div class="btn btn-shadow-wrapper icon">
+						<button class="btn btn-secondary next-arrow-slider">
+							<i class="fa-solid fa-chevron-right"></i>
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- About -->
+			<section class="about" id="about">
+				<div class="about__content">
+					<div class="about__content__text">
+						<h2>About Us</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+							temporibus ex autem neque minima rerum suscipit incidunt pariatur
+							doloribus. Vitae aperiam sunt fuga in quia. Nihil cumque maiores
+							pariatur sit.
+						</p>
+					</div>
+
+					<div class="btn-shadow-wrapper cta-btn">
+						<a href="#footer" class="btn btn-primary">Order Now</a>
+					</div>
+				</div>
+				<div class="about__image">
+					<div class="image-shadow">
+						<div class="image"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="footer__content">
+				<div class="form-col">
+					<form>
+						<h2>Contact Us</h2>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" name="email" placeholder="user@example.com" />
+						</div>
+
+						<div class="form-group">
+							<label for="subject">Subject</label>
+							<input
+								type="text"
+								name="subject"
+								placeholder="ordering to city"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="content">Content</label>
+							<textarea name="content"></textarea>
+						</div>
+
+						<div class="btn-shadow-wrapper cta-btn">
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</form>
+				</div>
+				<div class="social-col">
+					<h3>You can find us on</h3>
+					<div class="social-nav">
+						<div class="btn-shadow-wrapper social">
+							<a class="btn instagram">
+								<i class="fa-brands fa-instagram"></i>
+							</a>
+						</div>
+						<div class="btn-shadow-wrapper social">
+							<a class="btn facebook">
+								<i class="fa-brands fa-facebook"></i>
+							</a>
+						</div>
+						<div class="btn-shadow-wrapper social">
+							<a class="btn twitter">
+								<i class="fa-brands fa-twitter"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="credits">
+				Made with <i class="fa-solid fa-heart"></i> by Hazem Lenin &copy;
+			</p>
+		</footer>
+	</body>
+</html>

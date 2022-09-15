@@ -1,0 +1,619 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Silkscreen", cursive;
+  scroll-behavior: smooth;
+  font-size: calc(1rem * 0.5vw);
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ff80ff;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #ff00ff;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.488rem;
+}
+
+h2 {
+  font-size: 2.074rem;
+}
+
+h3 {
+  font-size: 1.728rem;
+}
+
+h4 {
+  font-size: 1.44rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: "Silkscreen", cursive;
+}
+
+.burger-btn {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 899px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
+.burger-btn span {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background: black;
+  border: 2px solid black;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.burger-btn span:nth-child(1) {
+  top: 10%;
+}
+
+.burger-btn span:nth-child(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.burger-btn span:nth-child(3) {
+  bottom: 10%;
+}
+
+.burger-btn.active span:nth-child(1) {
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+
+.burger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-btn.active span:nth-child(3) {
+  bottom: 50%;
+  -webkit-transform: translateY(50%) rotate(-45deg);
+          transform: translateY(50%) rotate(-45deg);
+}
+
+.burger-btn.active ~ nav {
+  height: 200px;
+}
+
+.btn-shadow-wrapper {
+  content: "";
+  display: block;
+  position: relative;
+  background: black;
+  z-index: 10;
+}
+
+.btn-shadow-wrapper.cta-btn {
+  width: 128px;
+  height: 64px;
+}
+
+.btn-shadow-wrapper.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-shadow-wrapper.social {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+}
+
+.btn-shadow-wrapper.social .btn {
+  color: white;
+}
+
+.btn-shadow-wrapper .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-shadow-wrapper .btn:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.btn-shadow-wrapper .btn::after {
+  content: "";
+  display: block;
+  width: 250%;
+  height: 20px;
+  background: white;
+  position: absolute;
+  left: 150%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
+}
+
+.btn-shadow-wrapper .btn:hover::after {
+  left: -250%;
+}
+
+.btn-primary {
+  background: #ff80ff;
+}
+
+.btn-secondary {
+  background: #80ff9d;
+}
+
+.instagram {
+  background: purple;
+}
+
+.facebook {
+  background: blue;
+}
+
+.twitter {
+  background: cyan;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100px;
+  padding: 0 32px;
+  background: #ff80ff;
+}
+
+@media screen and (min-width: 899px) {
+  header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 20px;
+    padding: 0 120px;
+  }
+}
+
+header .header-logo {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+header nav {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  background: #ff80ff;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 899px) {
+  header nav {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+}
+
+header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+@media screen and (min-width: 899px) {
+  header nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
+  }
+}
+
+header nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: black;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+  padding: 32px 32px;
+}
+
+@media screen and (min-width: 899px) {
+  .hero {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 40px 120px;
+  }
+}
+
+.hero .hero__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+}
+
+.hero .hero__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero .hero__image .image-shadow {
+  position: relative;
+  width: 250px;
+  height: 400px;
+  background: black;
+}
+
+.hero .hero__image .image-shadow .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  left: -10px;
+  background-image: url("../images/pexels-karolina-grabowska-4016512.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.flavours {
+  padding: 20px 0;
+  background: #ff80ff;
+}
+
+.flavours h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.flavours .flavours-slider .flavour-shadow .flavour {
+  width: 300px;
+  height: 200px;
+  margin: 0 20px;
+  background: white;
+}
+
+.flavours .flavours-slider .flavour-shadow .flavour figcaption {
+  padding: 5px 20px 20px 20px;
+}
+
+.flavours .flavours-slider .flavour-shadow .flavour .image-holder {
+  width: 300px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.flavours .flavours-slider .flavour-shadow .flavour .image-holder img {
+  width: 100%;
+  height: 100%;
+}
+
+.flavours .slider-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 32px 0;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+  padding: 40px 32px;
+  background: black;
+}
+
+@media screen and (min-width: 899px) {
+  .about {
+    padding: 40px 120px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.about .about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+  background: white;
+  padding: 32px;
+}
+
+.about .about__content .about__content__text h2 {
+  margin: 0 0 20px 0;
+}
+
+.about .about__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .about__image .image-shadow {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: white;
+}
+
+@media screen and (min-width: 899px) {
+  .about .about__image .image-shadow {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+.about .about__image .image-shadow .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  left: -10px;
+  background-image: url("../images/pexels-meruyert-gonullu-6161503.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer {
+  background: #ff80ff;
+  padding: 40px;
+}
+
+footer .footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  padding: 32px;
+  gap: 32px;
+}
+
+@media screen and (min-width: 899px) {
+  footer .footer__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 32px 64px;
+  }
+}
+
+footer .footer__content .form-col {
+  background: blue;
+}
+
+footer .footer__content .form-col form {
+  background: gray;
+  padding: 32px;
+  color: white;
+  width: 300px;
+}
+
+footer .footer__content .form-col form .form-group {
+  width: 100%;
+  margin: 20px 0;
+}
+
+footer .footer__content .form-col form .form-group input {
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+}
+
+footer .footer__content .form-col form .form-group textarea {
+  width: 100%;
+}
+
+footer .footer__content .form-col form .cta-btn {
+  margin: 0 auto;
+}
+
+footer .footer__content .social-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer__content .social-col h3 {
+  margin: 0 0 20px 0;
+}
+
+footer .footer__content .social-col .social-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+}
+
+footer .credits {
+  padding: 32px 0 0 0;
+  color: white;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

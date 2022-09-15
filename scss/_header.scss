@@ -1,0 +1,68 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	height: $header-height;
+	padding: 0 $vertical-padding;
+	background: $primary-color;
+
+	@include breakpoint(medium) {
+		justify-content: start;
+		gap: 20px;
+		padding: 0 $vertical-padding-desktop;
+	}
+
+	.header-logo {
+		font-weight: bold;
+		font-size: 25px;
+	}
+
+	nav {
+		position: absolute;
+		top: $header-height;
+		left: 0;
+		width: 100vw;
+		height: 0;
+		background: $primary-color;
+		transition: height 0.3s;
+		overflow: hidden;
+
+		@include breakpoint(medium) {
+			position: static;
+			width: auto;
+			height: auto;
+		}
+
+		ul {
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			gap: 20px;
+
+			@include breakpoint(medium) {
+				flex-direction: row;
+				gap: 30px;
+			}
+
+			li {
+				a {
+					&::after {
+						content: "";
+						display: block;
+						width: 0;
+						height: 4px;
+						background: black;
+						transition: width 0.3s;
+					}
+
+					&:hover::after {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
